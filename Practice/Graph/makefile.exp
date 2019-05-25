@@ -1,5 +1,0 @@
-TARGET_LIBS := \
-    $(TARGET_LIBS) \
-	GraphTest \
-
-include $(PROJECT_DIR)/common.exp

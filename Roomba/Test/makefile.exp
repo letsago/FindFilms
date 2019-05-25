@@ -1,7 +1,0 @@
-include $(PROJECT_DIR)/common.exp
-
-TARGET_LIBS := \
-    $(TARGET_LIBS) \
-	RoombaProjectTest \
-
-include $(PROJECT_DIR)/Src/makefile.exp

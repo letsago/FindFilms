@@ -1,5 +1,0 @@
-TARGET_LIBS := \
-    $(TARGET_LIBS) \
-	VectorTest \
-
-include $(PROJECT_DIR)/common.exp

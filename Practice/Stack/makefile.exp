@@ -1,5 +1,0 @@
-TARGET_LIBS := \
-    $(TARGET_LIBS) \
-	StackTest \
-
-include $(PROJECT_DIR)/common.exp
