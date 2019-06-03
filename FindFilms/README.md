@@ -1,7 +1,7 @@
 # FindFilms Implementation
 
 Hello and welcome to this README! This documents my implementation of FindFilms app. 
-The FindFilms app returns relevant movie showings based on date, city, and specific movie criteria user input. 
+The FindFilms app returns relevant AMC movie showings based on date, city, and specific movie criteria user input. 
 The app is built using: 
 
 * Flask-SocketIO (Python library) - for the server
@@ -72,6 +72,7 @@ All test cases were written using [pytest](https://docs.pytest.org/en/latest/) f
             * Contains all configuration files
         * /static
             * Contains personalized CSS style template
+            * Contains javascript code
         * /templates
             * Contains all webpages written in Jade
             * /common
@@ -98,9 +99,9 @@ All test cases were written using [pytest](https://docs.pytest.org/en/latest/) f
 - [x] Created pop up modals to show detailed results
 - [x] Display active user count
 - [x] Pop up modals request detailed results on user clicks
+- [x] Parallel processing to speed up web scraping
 
 ## Potential future work
-- [ ] Parallel processing to speed up web scraping
 - [ ] Find and return minimum distance theater with available showing from user location
 - [ ] Create recommendation system with user search history
 

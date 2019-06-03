@@ -14,12 +14,11 @@ Base.query = db_session.query_property()
 def init_test_db():
     Base.metadata.create_all(bind=engine)
     from server.database import db_session
-    from server.models import Movie, Theater, Showing, User, Genre, Cast, Director
+    from server.models import Movie, Theater, Showing, Genre, Cast, Director
 
     Movie.query.delete()
     Theater.query.delete()
     Showing.query.delete()
-    User.query.delete()
     Genre.query.delete()
     Cast.query.delete()
     Director.query.delete()
@@ -99,8 +98,7 @@ def init_test_db():
     theater_one = Theater('https://www.amctheatres.com/movie-theatres/seattle-tacoma/amc-pacific-place-11', 'AMC Pacific Place 11', '600 Pine Street - Ste 400', 'Seattle', 'Washington', 98101)
     theater_two = Theater('https://www.amctheatres.com/movie-theatres/seattle-tacoma/amc-oak-tree-6', 'AMC Oak Tree 6', '10006 Aurora Avenue N.', 'Seattle', 'Washington', 98133)
     theater_three = Theater('https://www.amctheatres.com/movie-theatres/seattle-tacoma/amc-seattle-10', 'AMC Seattle 10', '4500 9th Ave Ne', 'Seattle', 'Washington', 98105)
-    user_one = User('admin', 'admin@admin.com', 'admin')
-    db_session.add_all([movie_one, movie_two, movie_three, movie_four, movie_five, movie_six, theater_one, theater_two, theater_three, user_one])
+    db_session.add_all([movie_one, movie_two, movie_three, movie_four, movie_five, movie_six, theater_one, theater_two, theater_three])
     db_session.commit()
     db_session.add_all([
         Genre(movie_one.id, 'Action & Adventure'),

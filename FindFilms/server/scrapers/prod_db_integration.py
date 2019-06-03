@@ -106,13 +106,13 @@ def get_theater_showings(theater_db):
         pool.join()
 
 def commit_all_showings(theaters):
-    # add static wait time after processing every 50 theaters to prevent being kicked out of AMC server while scraping
     theater_processed_count = 0
     for theater_db in theaters:
         get_theater_showings(theater_db)
         theater_processed_count += 1
-        if theater_processed_count % 50 == 0:
-            time.sleep(120)
+        # add static wait time after processing certain number of theaters to prevent timing out of AMC server while scraping
+        if theater_processed_count % 25 == 0:
+            time.sleep(90)
 
 def update_prod_showings():
     # updates showings database and adds any new movies and related info to their appropriate databases using preexisting theater database info
