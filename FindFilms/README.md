@@ -12,7 +12,7 @@ The app is built using:
 ## How to run
 
 ```bash
-git clone https://flashhire@dev.azure.com/flashhire/PatrickYu/_git/PatrickYu
+git clone https://github.com/letsago/FindFilms.git
 
 # To setup working environment
 [Virtualenv documentation](https://virtualenv.pypa.io/en/latest/)
@@ -21,7 +21,7 @@ git clone https://flashhire@dev.azure.com/flashhire/PatrickYu/_git/PatrickYu
 source path-to-virtualenv/bin/activate
 
 # Please enter appropriate directory and install all necessary packages from requirements.txt file first
-cd PatrickYu/FindFilms/server
+cd FindFilms/FindFilms/server
 pip install -r requirements.txt 
 
 # To initialize test database
