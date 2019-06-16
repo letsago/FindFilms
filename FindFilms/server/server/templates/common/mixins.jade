@@ -59,7 +59,7 @@ mixin addResult(data)
             if(data.movie.img)       
                 img.mt-2.w-75(src=data.movie.img)
         each theaterShowing in data.theaterShowings
-            .col
+            .col-0.mx-auto
                 button.btn.btn-info(data-toggle='modal', data-target='#theaterModal', data-showing=theaterShowing.json)= theaterShowing.name
                 +addTheaterModal()
                 
