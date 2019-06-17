@@ -6,9 +6,10 @@ block title
 block content
     +navbar('Results')
         +button('/search', 'Back to Search')
-    .container.mb-4.mt-4
+    .container.mb-5.mt-5
         if(allData)
             for data in allData
-                +addResult(data)
+                .mb-5
+                    +addResult(data)
         else
             h2.text-center No showings in our record match your criteria. Please search again.
