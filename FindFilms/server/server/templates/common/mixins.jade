@@ -50,18 +50,19 @@ mixin addTheaterModal()
                     #times.pl-4.row
 
 mixin addResult(data)
-    .row
-        .col
-            a.h2.font-weight-bold.m-0(data-toggle='modal', data-target='#movieModal', href='#', data-movie=data.movie.json)= data.movie.title
-            +addMovieModal()
-    .row.align-items-center.mb-4
-        .col-3
+    .row.mb-2
+        .col.text-center
+            a.h1.font-weight-bold(data-toggle='modal', data-target='#movieModal', href='#', data-movie=data.movie.json)= data.movie.title
+        +addMovieModal()
+    .row.mb-2
+        .col.text-center
             if(data.movie.img)       
-                img.mt-2.w-75(src=data.movie.img)
-        each theaterShowing in data.theaterShowings
-            .col-0.mx-auto
-                button.btn.btn-info(data-toggle='modal', data-target='#theaterModal', data-showing=theaterShowing.json)= theaterShowing.name
-                +addTheaterModal()
+                img.w-25(src=data.movie.img)
+    .row
+        .col.text-center
+            each theaterShowing in data.theaterShowings
+                button.btn.btn-info.m-2(data-toggle='modal', data-target='#theaterModal', data-showing=theaterShowing.json)= theaterShowing.name
+        +addTheaterModal()
                 
 mixin button(link, message)
     a(href=link)
