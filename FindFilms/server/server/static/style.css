@@ -1,10 +1,6 @@
 /* Font */
 
-.col h4 {
-    font-weight: bold;
-}
-
-.col-3 h4 {
+.modal-body h4 {
     font-weight: bold;
 }
 
