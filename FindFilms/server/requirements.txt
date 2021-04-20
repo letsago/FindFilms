@@ -27,7 +27,7 @@ monotonic==1.5
 more-itertools==5.0.0
 pathlib2==2.3.3
 pluggy==0.8.1
-py==1.7.0
+py==1.10.0
 pyjade==4.0.0
 PyMySQL==0.9.3
 pytest==4.1.1
