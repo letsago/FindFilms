@@ -21,7 +21,7 @@ greenlet==0.4.15
 idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10
-lxml==4.3.0
+lxml==4.9.1
 MarkupSafe==1.1.0
 monotonic==1.5
 more-itertools==5.0.0
